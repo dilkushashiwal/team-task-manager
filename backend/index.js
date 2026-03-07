@@ -30,7 +30,7 @@ const app = express()
 // Middleware to handle cors
 app.use(
   cors({
-    origin: process.env.FRONT_END_URL || "http://localhost:5173",
+    origin: process.env.FRONT_END_URL || "",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -40,6 +40,7 @@ app.use(
 app.use(express.json())
 
 app.use(cookieParser())
+
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000!")
