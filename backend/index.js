@@ -30,7 +30,7 @@ const app = express()
 // Middleware to handle cors
 app.use(
   cors({
-    origin: process.env.FRONT_END_URL || "",
+    origin: process.env.FRONT_END_URL || "https://team-task-manager-frontend-nine.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -42,9 +42,9 @@ app.use(express.json())
 app.use(cookieParser())
 
 
-app.listen(3000, () => {
+/*app.listen(3000, () => {
   console.log("Server is running on port 3000!")
-})
+})*/
 
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
@@ -65,3 +65,5 @@ app.use((err, req, res, next) => {
     message,
   })
 })
+
+export default app;
