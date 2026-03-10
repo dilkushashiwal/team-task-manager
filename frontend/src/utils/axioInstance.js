@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = "https://team-task-manager-nine.vercel.app"
+const BASE_URL = "https://team-task-manager-nine.vercel.app/api"
 //const BASE_URL = "http://localhost:3000/api"
 
 const axiosInstance = axios.create({
